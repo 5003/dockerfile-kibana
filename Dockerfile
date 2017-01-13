@@ -6,7 +6,7 @@ RUN apk add --no-cache --virtual .builder tar && \
     apk add --no-cache su-exec \
                        nodejs-lts \
                        tini && \
-    mkdir /usr/share/kibana/ && curl --location https://download.elastic.co/kibana/kibana/kibana-4.6.3-linux-x86_64.tar.gz \
+    mkdir /usr/share/kibana/ && curl --location https://download.elastic.co/kibana/kibana/kibana-4.6.4-linux-x86_64.tar.gz \
     | tar --gzip --extract --file - --directory /usr/share/kibana/ --strip-components 1 && \
     apk del --no-cache .builder && \
     chmod +x /usr/local/bin/docker-entrypoint.sh
